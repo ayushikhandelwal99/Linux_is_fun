@@ -2,7 +2,7 @@
 This repo is consists of notes and theory answers of many questions of sessions of my training 
 
 ### 001 
-  This was an introductory session about how to set up fedora in your system
+ ` This was an introductory session about how to set up fedora in your system ` 
   
 ### 002
 ```
