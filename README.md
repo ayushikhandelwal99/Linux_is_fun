@@ -5,7 +5,7 @@ This repo is consists of notes and theory answers of many questions of sessions 
   This was an introductory session about how to set up fedora in your system
   
 ### 002
-  `
+```
 . kernal
 	driver management and loding is done by kernal
 	it interects with the hardware
@@ -27,5 +27,4 @@ This repo is consists of notes and theory answers of many questions of sessions 
 
 Q-->WHERE exactly linux is used?
  solution--> EX:- openwrt.org
-  
-`
+```
