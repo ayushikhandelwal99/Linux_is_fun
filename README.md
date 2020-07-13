@@ -28,3 +28,13 @@ This repo is consists of notes and theory answers of many questions of sessions 
 Q-->WHERE exactly linux is used?
  solution--> EX:- openwrt.org
 ```
+### 003
+```
+There are 3 ways to access any os
+ ->GUI, CLI, emergency based
+ - GUI stands for graphical user interface
+ - CLI stands for command line interface
+
+any application can be accessed by click or typing
+In all every application is controlled by either click or text
+```
