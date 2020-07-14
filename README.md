@@ -258,3 +258,46 @@ solution-->head [option] [file] --> outputs first part of files
 	word$ for lines ending with this word
 	-v gives lines where that word is not present
 ```
+
+### 011
+```
+* cat : stdin lena and stdout dena
+* for input the sign in < 
+	- ` cat  /tmp/ok.txt`  here "<" is default
+
+*festival command: Festival is a general purpose text-to-speech system. As well as simply rendering text as speech it can be used in an interactive command mode for testing and developing various aspects of speech synthesis technology. Festival has two major modes, command and tts (text-to-speech).{EX: cat /var/log/dmesg | festival --tts}
+
+Q--> output of "echo $x + 1" where x=100
+solution--> 100  + 1
+
+*for mathematical expressions in shell scripting we can use
+	-  y=$(($x+1)) 
+	- expr $x + 1
+
+*expr command: The expr command in Unix evaluates a given expression and displays its corresponding output.
+	- for multiplication * must be escaped { $ expr 5 \* 3}
+	
+*factor command: The factor command in Linux is used to print the prime factors of the given numbers, either given from command line or read from standard input. The numbers given through standard input may be delimited by tabs, spaces or newlines.
+
+*seq command: seq command lets you print a sequence of numbers.
+	- syntax {  seq [options] specification  }
+* ` echo "password" | passwd user_name  --stdin`   asks for password only one time 
+*ping -c 3 site : it will ping only 3 times
+*firefox url & : this will open url in firefox
+
+*LOOPS
+     - for
+     1  for((i=1;i<10;i++))
+          do
+	date
+          done        
+     2  for i in something
+           do
+	date
+           done
+	
+     - while [ condition ]
+        do
+              date
+        done
+```
