@@ -279,6 +279,9 @@ solution--> 100  + 1
 	
 *factor command: The factor command in Linux is used to print the prime factors of the given numbers, either given from command line or read from standard input. The numbers given through standard input may be delimited by tabs, spaces or newlines.
 
+Q-->Why when using for loop for useradd takes too much time but password change  do not?
+solution-->
+
 *seq command: seq command lets you print a sequence of numbers.
 	- syntax {  seq [options] specification  }
 * ` echo "password" | passwd user_name  --stdin`   asks for password only one time 
