@@ -304,3 +304,60 @@ solution-->
               date
         done
 ```
+
+### 012
+```
+Data management in linux
+
+*data management is a utility
+*in /etc/passwd every row is delimeted by \n and every column is seperated by colon(:)
+
+*awk --> Awk is a scripting language used for manipulating data and generating reports.The awk command programming language requires no compiling, and allows the user to use variables, numeric functions, string functions, and logical operators.
+1. AWK Operations:
+(a) Scans a file line by line
+(b) Splits each input line into fields
+(c) Compares input line/fields to pattern
+(d) Performs action(s) on matched lines
+syntax: awk options 'selection _criteria {action }' input-file > output-file
+
+*gawk-->
+*can be used to :
+Scans a file line by line.
+Splits each input line into fields.
+Compares input line/fields to pattern.
+Performs action(s) on matched lines.
+Transform data files.
+Produce formatted reports.
+Format output lines.
+Arithmetic and string operations.
+Conditionals and loops.
+syntax: gawk [POSIX / GNU style options] -f progfile [--] file ...
+	gawk [POSIX / GNU style options] [--] 'program' file ...
+
+*cut --> a command for cutting out the sections from each line of files and writing the result to standard output. It can be used to cut parts of a line by byte position, character and field.
+syntax:    cut OPTION... [FILE]...
+           cut -d "delimiter" -f (field number) file.txt
+
+*grep-->The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for globally search for regular expression and print out).
+syntax: grep [options] pattern [files]
+
+*sed-->SED command in UNIX is stands for stream editor and it can perform lot’s of function on file like, searching, find and replace, insertion or deletion. Though most common use of SED command in UNIX is for substitution or for find and replace.
+	- SED is a powerful text stream editor. Can do insertion, deletion, search and replace(substitution).
+	- SED command in unix supports regular expression which allows it perform complex pattern matching.
+syntax: sed OPTIONS... [SCRIPT] [INPUTFILE...]
+
+*locate-->locate command in Linux is used to find the files by name. There is two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart because instead of searching the file system when a file search is initiated, it would look through a database.
+syntax: locate [OPTION]... PATTERN...
+
+*find-->The find command in UNIX is a command line utility for walking a file hierarchy. It can be used to find files and directories and perform subsequent operations on them. It supports searching by file, folder, name, creation date, modification date, owner and permissions. By using the ‘-exec’ other UNIX commands can be executed on files or folders found.
+syntax:  find [where to start searching from] [expression determines what to find] [-options] [what to find]
+
+*less-->jitni bdi screen husme sbse phle data show kr dega. enter for line change and space for page change
+
+*more-->jitni bdi screen husme sbse phle data show kr dega. enter for line change but here space will quit the file
+
+*wildcard is kind of  some notation like $, *, ^
+*regex {like a pattern matching algorithm} is having its pattern where it uses wildcards to do some automation
+
+*NR: NR command keeps a current count of the number of input records. Remember that records are usually lines. Awk command performs the pattern/action statements once for each record in a file.
+```
