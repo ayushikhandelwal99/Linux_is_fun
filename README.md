@@ -361,3 +361,67 @@ syntax:  find [where to start searching from] [expression determines what to fin
 
 *NR: NR command keeps a current count of the number of input records. Remember that records are usually lines. Awk command performs the pattern/action statements once for each record in a file.
 ```
+
+### 013
+```
+Compression
+*it means data representation {data size to iska mtlb kbhi tha hi nhi}
+*it can both increase the size and decrease the size
+*compression capability se upr compress krne pr size increase ho jati h
+
+*compression techniques
+	- zip
+	- bzip
+	- gzip
+*by gunzip we can unzip the file
+*compressor vo hi accha hota h jo compression and decompression dono almost same rate se kre
+*compression can be only judged by the type of data
+```
+
+### 014
+```
+Backup and Recovery
+*to take backup in linux use ` TAR`  and in windows it is ` RAR` 
+* RAR and TAR are methods used to archive not compress {like taking the data and putting it into one box}
+*tar -cvf filename.tar files_locations --> to create tar file
+*tar -tvf filename.tar  --> to view data inside tar with their permissions
+*tar -xvf filename.tar --> if you deleted data from its location but want it back{extracting data}
+*tar -xvf filename.tar  -C location  --> if you want to extract all data in some location
+*tar -cvzf filename.tar.gz files_locations  --> if you want to compress the data too
+*tar -xvzf filename.tar.gz --> will decompress and unarchive the data
+*if you want to compress it by bz2 then use tar -cvjf filename.tar.bz2
+
+Q--> why we need archive even when we can store all that data in a directory
+solution--> 1. execute {as directory can have executable files and directories so any virus or program can run this even if the data is non active}
+	2. network access {directory can be accessed from network}
+	3. transfer {directory cannot be emailed you have to convert it in archive or by any other technology}
+	
+User Management
+*categories of users
+	- guest/ Nobody
+	- System user
+	- Non admin user/ non privileged user
+		- normal user
+	- root/ admin
+		- user having all privileges
+
+*for creating users in rpm format os we generally use useradd and in deb format os we generally use adduser
+
+*if we don't assign password to the created user then it can't be accessed by either CLI or GUI
+
+*user login methods
+	- shell {su - username}{jisse hm doosre user ki home diretory me hi land kre agr - nhi use kiya to jis directory me current user ki h usi me land krenge and if vha vo dir nhi h doosre user ke andr to ommand to run ho jayegi vha but u can't create data there}
+	- GUI
+
+*useradd username creates 10 changes when run and if you create those 10 changes then you can create user without useradd command
+	- /etc/passwd me user ki entry
+	- /etc/shadow {jha sare users ke password hote h}
+	- /etc/group {group name of user}
+	- /etc/gshadow {password of groups}
+	- /home/username {create a folder here}
+	- secure home directory
+	- /var/spool/mail/username {mail box is something jha sare email store honge}
+	- /etc/skel me jo data h vo user me copy ho jata h
+	- access of PATH variable
+	- kernal interaction 
+```
