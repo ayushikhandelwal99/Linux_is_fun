@@ -424,4 +424,79 @@ User Management
 	- /etc/skel me jo data h vo user me copy ho jata h
 	- access of PATH variable
 	- kernal interaction 
+	
+*yes command:The yes command outputs the same string, STRING, in a constant stream. If STRING is not specified, the word it repeats is "y". yes dates back to a time before Unix commands included the "force" (-f) option, which for many commands is the same as answering "yes" to all prompts.
+
+*mailbox file:MBOX is a file extension for a text file used to organize and store e-mail messages. MBOX stands for MailBOX. The MBOX file is the most common format for storing email messages on a hard drive.
+```
+
+### 015
+```
+*diff -u shows the diferences between two files
+
+*Virtual terminal: A Virtual Terminal is a full-screen terminal which doesn't run inside an X window (unlike the terminal window on your graphical desktop). Virtual terminals are found on all GNU/Linux systems, even on systems which don't have a desktop environment or graphical system installed.
+
+*finger command: Finger command is used in Linux and Unix-like system to check the information of any currently logged in users from the terminal. It is a command-line utility that can provide users login time, tty (name), idle time, home directory, shell name, etc.
+
+*Under /etc/passwd
+1. username
+2. linkto password i.e. /etc/shadow {here x is a notation by linux, its like a soft link or shortcut}
+3. UID(userid): it is power of that user
+	- it ranges between 0 - 65535
+	- UID 0: root
+	- UID 1000 - 60000: not root user
+	- UID 1-999 & 60001- 65535: system user/dedicated user
+4. GID(groupid)
+5. comment field- kuch bhi likh do .. like info about user
+6. users home directory : user ko kha bhejna h login pr
+7. default shell
+
+
+*Under /etc/shadow {only root can open it}
+1. username
+2. actual password {the format of the password is hash}
+	- hash is a one directional approach
+	- their are so many algos to do hashing
+-- to identify which hash algo is used by your linux you can go to /etc/login.defs
+--$1 -->MD5
+--$5 -->SHA 256
+--$6--> SHA 512
+
+3. no. of days since last password change
+	- days from 1 jan 1970
+4. minimum no. of days to change password {itne din se phle password wapas change nhi kr skte}
+	- 0 means their is no expire date : kbhi bhi change krlo
+
+5. maximum no. of days to change password {forcefully ask for password change}
+	- 99999 means kbhi nhi change krna	
+
+*chage -l username : will give all details about user
+```
+
+### 016
+```
+6. no of warning days before your password expire
+
+7. max number of days to change the password {mtlb itne din bad password expire ho jayega}{mtlb aapko 5th khtm hone ke bad itne din milenge password change krne ke liye and if change nhi kiya to password expire ho jayega} {root se change krwa skte h isme}
+
+8. number of days for account expire
+
+9. future reserve {agr kuch aaya future me to}
+
+** shadow file /etc/login.defs file se default data uthata h
+
+
+*under /etc/group
+1. groupname
+2. x 
+	- link to /etc/gshadow file
+3. group id
+4. member list
+
+*under /etc/gshadow
+1. group name
+2. password
+3. reserve
+4. member list
+
 ```
