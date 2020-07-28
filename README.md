@@ -499,4 +499,6 @@ User Management
 3. reserve
 4. member list
 
+*busybox: Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. ... The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it.
+
 ```
