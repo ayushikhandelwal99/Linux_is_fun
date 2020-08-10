@@ -499,6 +499,47 @@ User Management
 3. reserve
 4. member list
 
-*busybox: Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. ... The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it.
+*busybox: Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. ... The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it. Also known as swiss army knife of linux.
 
+```
+
+### 017
+```
+Linux file system permissions
+1. general permission  (read , write, execute)
+2. advanced permissions(sticky bit, sgid, suid, acl)
+
+*accessing a file or directory means
+- read(r=4)
+- write(w=2)
+- execute(x=1)
+
+* every file and directory have their inode table which consists of their permissions
+*their are 7 types of file in linux
+
+*in inode table
+1. type of file
+2. permission for owner (next 3)
+3. permission for group (next 3)
+4. permission for others (next 3)
+5.  .(dot) means general linux permission {their are other too}
+6. number of links {soft link and hard link} 
+7. owner name : represented by u
+8. group: represented by g
+9. size of file or folder
+10. date and time of last access or modify
+11. file or folder location
+
+
+*owner can be more than one
+*others are represented by o
+* a stands for all {a-permission}
+*we can set permissions by 'u+permission' for user and similar for others(o) and group(g) too
+* or we can use numeric values like 755
+
+##SECURITY TYPES
+- DAC 
+- MAC
+- PAM
+ 
 ```
