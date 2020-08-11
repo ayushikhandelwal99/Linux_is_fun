@@ -538,8 +538,41 @@ Linux file system permissions
 * or we can use numeric values like 755
 
 ##SECURITY TYPES
-- DAC 
+- DAC (discretionary access control)
+	-general {r,w,x,advanced [owner,group,others]}
+	-extended {}
 - MAC
 - PAM
  
+```
+
+### 018
+```
+##DAC
+
+#general permissions
+//r,w,x
+*for changing owner and group respectively
+*chown name_of_owner name_of_file
+*chgrp name_of_group name_of_file
+*chown  owner:group  file_name   //can change both owner and group
+
+*primary and secondary group
+	- user bnate time jo group bnta h vo primary grp hotah.
+	- agr kisi or grp ka part bhi bnadete h us usr ko .. to vo nya grp secondary grp hota h
+
+*lid command: The lid or libuser-lid command displays information about groups containing user name, or users contained in group name. This command requires sudo privileges. You should run the libuser-lid command instead of the lid command on newer systems.
+
+*umask : whenever we create a file or folder in linux to usko default kya permission deni h ye umask decide krta h
+*umask = max permission - permission given 
+*umask ki value /etc/bashrc me define hoti h
+*umask ka first bit special permissions ke liye h
+
+//Advanced permissions
+*sticky bit  +t  or it can be applied by (1) ==>1770 {770 are previous one's} {same directory me bhot sare user kaam kr rhe ho to vo khudke alawa kisi ka bhi kaam change na kr paye}
+
+*sgid g+s  or it can be applied by(2) ==>2770  {set group id} {jitne bh users group me kaam kre un sare kaam ka group vo hi bne jisme vo file h mtlb vo hi group inherit ho jaye
+}
+[both sticky bit and sgid can be applied by 3770 i.e. (1+2)]
+*group inheritence {sgid} for setting a common group to all the members of that group
 ```
