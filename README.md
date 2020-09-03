@@ -224,18 +224,20 @@ solution-->      >  or >>
 ### 010
 ```
 - in another system(prerequisite IP/TCP/Port number)
-	.setup the connectivity between two system using ping ip
-	*ifconfig command is used to check the IP address
-	*ping IP of another machine when both are connected to same wifi
+	*setup the connectivity between two system using host only network or bridge network
+ 	 and check if the networks are on the same subnet must be able to ping the other system connected to the network. 
+	*[ ifconfig / ip a s / ip addr show ] command can be used to check the IP address . 
+	* If your IP ranges from 192.168 then you can use the command such as ip a s | grep 192.168* [ This command will also attach the ip you are looking for ]
+	*ping IP of another machine when both are connected to same wifi / Hotspot
 	*first to create a socket (IP:port)
 	*receiver always starts the socket first
-	*in linux NetCat utility can be used to create socket 
-	*command is nc -l 8888    (-l for listen) on receiver first 
+	*in linux NetCat utility can be used to create socket. 
+	*command is nc -l 8888    (-l for listen) on receiver first. 
 	*nc Ip_of_receiver 8888
 	*if we want that sender can not interept server then we can use
 	(nc -l 8888 -k) {this is for sending output to receiver}
 	*for sending to receiver "command | nc IP 8888"
-	*if we want to execute command from receiver side then {nc -l 8888 -k | /bin/bash -e} by this we can control the receiver system from sender
+	*if we want to execute command from receiver side then {nc -l 8888 -k | /bin/bash -e} by this we can control the receiver system from sender.
 
 
 Q--> nc and ncat:
